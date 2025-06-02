@@ -1,0 +1,7 @@
+{
+    "start_url": "https://www.janespatisserie.com/category/dessert/",
+    "base_url": "https://www.janespatisserie.com/category/dessert/page/{}/",
+    "pages_to_scrape": 3,
+    "delay_seconds": 1,
+    "output_file": "desserts.json"
+}
