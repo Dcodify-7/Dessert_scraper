@@ -95,8 +95,8 @@ if __name__ == "__main__":
 
     # Web To Scrape (first page, no /page/1/)
     first_page_url = config["start_url"]
-    print("🍰 Starting dessert hunt on page 1")
-    logging.info("🍰 Starting dessert hunt on page 1")
+    print("🍰 Starting dessert hunt on page 1...")
+    logging.info("🍰 Starting dessert hunt on page 1...")
     all_recipes.extend(main(first_page_url))
     time.sleep(config["delay_seconds"])  # pause after page
 
@@ -120,3 +120,4 @@ if __name__ == "__main__":
 #-------------------------------------
 
 print("The scraping process has been completed.")
+# print(f"Data:\n {all_recipes}")
