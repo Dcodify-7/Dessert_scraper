@@ -46,7 +46,7 @@ Open config.json and update the values if needed:
   "output_file": "desserts.json"
 }
 
-Configuration Options:
+# Configuration Options:
 start_url: URL of the first page to scrape.
 base_url: Template URL for paginated pages (page 2, 3, etc.).
 pages_to_scrape: Number of pages to scrape.
@@ -62,7 +62,7 @@ python pp1.py
 ---
 ## Output
 Scraped data is saved in: desserts.json
-Log messages (errors, progress) are saved in: main.log
+Log messages (errors, progress) are saved in: main.log.
 
 ---
 ## Features
