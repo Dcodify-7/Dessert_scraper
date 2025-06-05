@@ -15,6 +15,7 @@ It scrapes recipe titles, images url, ingredients, and instructions, then saves 
 | `main.log` | Log file (errors, scraping status) |
 | `pp1.py` | Main Python scraper script |
 | `requirements.txt` | List of required packages |
+| `.gitignore`       | Specifies files/folders to ignore in git |
 | `README.md` | Project description and usage instructions |
 
 ---
