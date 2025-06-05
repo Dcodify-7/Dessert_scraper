@@ -1,6 +1,8 @@
 # PP1 Dessert Scraper
 print("Dessert Recipe Scraper.\n")
 
+#-------------------------------------
+
 # Imports
 import requests
 from bs4 import BeautifulSoup
@@ -36,6 +38,8 @@ def main(url):
         return []
 
     soup = BeautifulSoup(response.content, "html.parser")
+
+    ## Saving the HTML source of the initial page
     # with open ("main_url.html", "w", encoding="utf-8") as file:
     #     file.write(soup.prettify())
 
@@ -43,6 +47,7 @@ def main(url):
     print(f"Found {len(recipes)} sweet recipes on page.\n")
     logging.info(f"Found {len(recipes)} sweet recipes on page.")
 
+    # Extracts Key Information From Each Recipe
     recipe_data = []
     for recipe in recipes:
         title = recipe.h2.a["title"]
@@ -59,13 +64,14 @@ def main(url):
 
         recipe_soup = BeautifulSoup(recipe_response.content, "html.parser")
 
-        # Getting More Data From Each Recipe
+        # Getting Additional Data From Each Recipe
         ingredients = []
         for n in recipe_soup.select(".wprm-recipe-ingredient"):
             text_one = " ".join(n.stripped_strings)
             cleaned = re.sub(r"(\d+)\s+(g|ml|kg|oz|tbsp|tsp|l)", r"\1\2", text_one)
             ingredients.append(cleaned)
 
+        # Collecting And Cleaning Instructions From Recipies
         instructions = []
         for m in recipe_soup.select(".wprm-recipe-instruction-text"):
             text_two = " ".join(m.stripped_strings)
@@ -99,8 +105,8 @@ if __name__ == "__main__":
     for page_number in range(2, config["pages_to_scrape"] + 1):
         print(f"🍰 Starting dessert hunt on page {page_number}...")
         logging.info(f"🍰 Starting dessert hunt on page {page_number}...")
-        url = base_url.format(page_number)
-        all_recipes.extend(main(url))
+        page_url = base_url.format(page_number)
+        all_recipes.extend(main(page_url))
         time.sleep(config["delay_seconds"])
 
     # Saving Data
@@ -114,4 +120,3 @@ if __name__ == "__main__":
 #-------------------------------------
 
 print("The scraping process has been completed.")
-#print()
