@@ -1,4 +1,4 @@
-# Dessert Recipe Scraper
+# 🧁 Dessert Recipe Scraper
 
 ---
 ## What It Does
