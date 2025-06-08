@@ -1,11 +1,9 @@
 # 🧁 Dessert Recipe Scraper
 
----
 ## What It Does
 Python web scraping project that collects dessert recipes from (https://www.janespatisserie.com/category/dessert/).  
 It scrapes recipe titles, images url, ingredients, and instructions, then saves the data to a JSON file.
 
----
 ## Project Structure
 
 | File | Description |
@@ -18,12 +16,10 @@ It scrapes recipe titles, images url, ingredients, and instructions, then saves 
 | `.gitignore`       | Specifies files/folders to ignore in git |
 | `README.md` | Project description and usage instructions |
 
----
 ## Prerequisites
 - Python 3.7 or higher
 - pip (Python package installer)
 
----
 ## How to Run the Scraper
 ```bash
 # 1. Clone The Repository
@@ -60,12 +56,10 @@ IMPORTANT: This scraper is adjusted to the structure of janespatisserie.com web 
 python pp1.py
 ```
 
----
 ## Output
 Scraped data is saved in: desserts.json
 Log messages (errors, progress) are saved in: main.log.
 
----
 ## Features
 Scrapes data from multiple pages (pagination).
 Goes in-depth to each recipe page (title, ingredients, instructions).
@@ -73,15 +67,12 @@ Customizable with config.json.
 Logs errors and progress to main.log.
 Clean UTF-8 encoded output.
 
----
 ## Requirements
 pip install -r requirements.txt
 
----
 ## Main dependencies:
 requests  
 beautifulsoup4
 
----
 **Author:** Darius  
 **Purpose:** Educational use only
