@@ -1,7 +1,4 @@
 # PP1 Dessert Scraper
-print("Dessert Recipe Scraper.\n")
-
-#-------------------------------------
 
 # Imports
 import requests
@@ -11,7 +8,6 @@ import time
 import re
 import logging
 
-#-------------------------------------
 
 # Set Up Logging
 logging.basicConfig(
@@ -21,13 +17,12 @@ logging.basicConfig(
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 
-#-------------------------------------
 
 # Load Config
 with open("config.json", "r") as file:
     config = json.load(file)
 
-#-------------------------------------
+
 #Main Function
 def main(url):
     try:
@@ -88,7 +83,6 @@ def main(url):
 
     return recipe_data
 
-# -------------------------------------
 
 if __name__ == "__main__":
     all_recipes = []
@@ -117,7 +111,6 @@ if __name__ == "__main__":
     with open("desserts.json", "r", encoding="utf-8") as file:
         data = json.load(file)
 
-#-------------------------------------
 
 print("The scraping process has been completed.")
 # print(f"Data:\n {all_recipes}")
